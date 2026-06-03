@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Help Cartório Internacional | Links</title>
+<meta name="description" content="Assessoria internacional para sua nova vida fora do Brasil. Saída definitiva, casamento no Brasil e muito mais.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:    #0b1d33;
+  --navy2:   #0f2540;
+  --navy3:   #1e3a5f;
+  --blue:    #a8c9e2;
+  --blue2:   #c9e0f0;
+  --gold:    #c9963a;
+  --gold2:   #e6b84a;
+  --white:   #ffffff;
+  --gray:    #8aa0b8;
+  --gray2:   #cdddec;
+}
+html,body{min-height:100vh;background:var(--navy)}
+body{font-family:'Inter',sans-serif;color:var(--white);line-height:1.6;display:flex;flex-direction:column;align-items:center}
+a{text-decoration:none;color:inherit}
+
+/* Fundo azul marinho escuro em gradiente */
+.page-bg{position:fixed;inset:0;z-index:0;
+  background:
+    radial-gradient(ellipse at 20% 0%,rgba(30,58,95,.55) 0%,transparent 55%),
+    radial-gradient(ellipse at 80% 100%,rgba(201,150,58,.14) 0%,transparent 55%),
+    linear-gradient(180deg,#0f2540 0%,#0b1d33 55%,#081626 100%)
+}
+
+/* Wrapper */
+.wrap{position:relative;z-index:1;width:100%;max-width:480px;padding:40px 24px 56px;display:flex;flex-direction:column;align-items:center}
+
+/* Foto fundadoras (PNG transparente sobre o gradiente) */
+.profile{display:flex;flex-direction:column;align-items:center;margin-bottom:24px;width:100%}
+.founders-photo{width:100%;max-width:360px;height:auto;margin-bottom:8px;
+  filter:drop-shadow(0 18px 40px rgba(0,0,0,.55))}
+.brand-mark{font-size:.7rem;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+.profile-name{font-size:1.5rem;font-weight:800;color:#fff;margin-bottom:6px;text-align:center;letter-spacing:-.01em}
+.profile-name span{background:linear-gradient(90deg,var(--gold),var(--gold2));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.profile-title{font-size:.78rem;font-weight:500;color:var(--blue);letter-spacing:.1em;text-transform:uppercase;text-align:center;margin-bottom:12px}
+.profile-bio{font-size:.88rem;color:var(--gray2);text-align:center;line-height:1.65;max-width:360px}
+.profile-creds{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin-top:12px;max-width:360px}
+.cred-tag{font-size:.67rem;font-weight:600;color:var(--gold2);background:rgba(201,150,58,.12);border:1px solid rgba(201,150,58,.3);padding:4px 11px;border-radius:100px}
+
+/* Divisor */
+.divider{width:44px;height:2px;background:linear-gradient(90deg,var(--gold),var(--gold2));border-radius:2px;margin:22px auto}
+
+/* Seção label */
+.section-label{font-size:.65rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gray);margin-bottom:14px;width:100%;text-align:left}
+
+/* Botões de link */
+.links{display:flex;flex-direction:column;gap:12px;width:100%;margin-bottom:26px}
+
+.link-btn{
+  display:flex;align-items:center;gap:14px;width:100%;
+  padding:16px 20px;border-radius:14px;
+  font-size:.92rem;font-weight:600;color:#fff;
+  transition:transform .18s,box-shadow .18s,border-color .18s,background .18s;
+  cursor:pointer;border:none;text-align:left;
+}
+.link-btn:hover{transform:translateY(-2px)}
+
+/* Primário — dourado (CTA WhatsApp) */
+.link-primary{
+  background:linear-gradient(135deg,#c9963a 0%,#e6b84a 50%,#a87830 100%);
+  color:#1b1304;
+  box-shadow:0 6px 26px rgba(201,150,58,.4);
+}
+.link-primary .link-title,.link-primary .link-desc{color:#1b1304}
+.link-primary .link-desc{opacity:.7}
+.link-primary:hover{box-shadow:0 10px 36px rgba(201,150,58,.6)}
+.link-primary .link-icon{background:rgba(0,0,0,.14)}
+
+/* Destaque — azul marinho */
+.link-navy{
+  background:linear-gradient(135deg,rgba(30,58,95,.85),rgba(15,37,64,.6));
+  border:1px solid rgba(168,201,226,.28);
+}
+.link-navy:hover{border-color:rgba(201,150,58,.5);box-shadow:0 6px 22px rgba(0,0,0,.4)}
+
+/* Secundário — card translúcido */
+.link-secondary{
+  background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.03));
+  border:1px solid rgba(255,255,255,.1);
+}
+.link-secondary:hover{border-color:rgba(201,150,58,.45);background:linear-gradient(180deg,rgba(201,150,58,.1),rgba(201,150,58,.03))}
+
+/* Ícone */
+.link-icon{flex-shrink:0;width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.15rem;background:rgba(255,255,255,.1)}
+
+.link-text{flex:1}
+.link-title{font-size:.92rem;font-weight:700;color:#fff;display:block;line-height:1.2}
+.link-desc{font-size:.74rem;color:rgba(255,255,255,.62);display:block;margin-top:2px}
+.link-arrow{flex-shrink:0;opacity:.45;font-size:1rem}
+
+/* Footer */
+.footer{margin-top:36px;font-size:.72rem;color:var(--gray);text-align:center;opacity:.8;line-height:1.7}
+.footer strong{color:var(--blue);font-weight:600}
+</style>
+</head>
+<body>
+<div class="page-bg"></div>
+
+<div class="wrap">
+
+  <!-- PERFIL -->
+  <div class="profile">
+    <img class="founders-photo" src="images/founders.png" alt="Kelen Souza e Dra. Giulya Naves — Help Cartório">
+    <div class="brand-mark">Help Cartório</div>
+    <div class="profile-name">Help Cartório <span>Internacional</span></div>
+    <div class="profile-title">Kelen Souza · Dra. Giulya Naves</div>
+    <div class="profile-bio">Assessoria internacional para você construir uma nova vida fora do Brasil — com segurança jurídica e do jeito certo.</div>
+    <div class="profile-creds">
+      <span class="cred-tag">Desde 2022</span>
+      <span class="cred-tag">100% Legal</span>
+      <span class="cred-tag">Atuação Internacional</span>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- LINKS -->
+  <div class="section-label">Fale com a gente</div>
+  <div class="links">
+
+    <a href="https://wa.me/447507853963" class="link-btn link-primary" target="_blank" rel="noopener">
+      <div class="link-icon">💬</div>
+      <div class="link-text">
+        <span class="link-title">Fale conosco no WhatsApp</span>
+        <span class="link-desc">Atendimento direto com nossa equipe</span>
+      </div>
+      <div class="link-arrow">↗</div>
+    </a>
+
+  </div>
+
+  <div class="section-label">Nossos serviços</div>
+  <div class="links">
+
+    <a href="https://helpcartorio.com/saida-fiscal-lp-captura" class="link-btn link-navy" target="_blank" rel="noopener">
+      <div class="link-icon">✈️</div>
+      <div class="link-text">
+        <span class="link-title">Faça sua Saída Definitiva do Brasil</span>
+        <span class="link-desc">Saída fiscal feita do jeito certo</span>
+      </div>
+      <div class="link-arrow">↗</div>
+    </a>
+
+    <a href="https://helpcartorio.com/casenobrasil/" class="link-btn link-navy" target="_blank" rel="noopener">
+      <div class="link-icon">💍</div>
+      <div class="link-text">
+        <span class="link-title">Case no Brasil</span>
+        <span class="link-desc">Casamento com validade internacional</span>
+      </div>
+      <div class="link-arrow">↗</div>
+    </a>
+
+  </div>
+
+  <div class="section-label">Site oficial</div>
+  <div class="links">
+
+    <a href="https://helpcartorio.com" class="link-btn link-secondary" target="_blank" rel="noopener">
+      <div class="link-icon">🌐</div>
+      <div class="link-text">
+        <span class="link-title">Visite nosso Website</span>
+        <span class="link-desc">helpcartorio.com</span>
+      </div>
+      <div class="link-arrow">↗</div>
+    </a>
+
+  </div>
+
+  <div class="footer">
+    © 2026 <strong>Help Cartório</strong> · Assessoria Internacional<br>
+    Todos os direitos reservados
+  </div>
+
+</div>
+</body>
+</html>
